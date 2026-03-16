@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<title>Yogurt WJ</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f7cfd4;
+scroll-behavior:smooth;
+}
+
+.wrapper{
+width:90%;
+max-width:1200px;
+margin:auto;
+background:#fff7f9;
+border-radius:30px;
+padding-bottom:40px;
+}
+
+/* MENU */
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 40px;
+align-items:center;
+position:sticky;
+top:0;
+background:#fff7f9;
+z-index:1000;
+}
+
+.logo{
+height:80px;
+margin-right:15px;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:bold;
+transition:.3s;
+}
+
+nav a:hover{
+color:#cc4f8a;
+}
+
+/* ICONO CARRITO */
+
+.carrito-icono{
+font-size:24px;
+cursor:pointer;
+position:relative;
+}
+
+#contadorCarrito{
+position:absolute;
+top:-10px;
+right:-10px;
+background:red;
+color:white;
+border-radius:50%;
+padding:3px 7px;
+font-size:12px;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+background:#a4b86c;
+margin:20px;
+padding:40px;
+border-radius:25px;
+align-items:center;
+justify-content:space-between;
+}
+
+.hero-text{
+width:45%;
+color:white;
+}
+
+.hero-text h1{
+font-size:40px;
+font-family:"Lobster Two", cursive;
+transform:scale(1.4);
+transform-origin:left;
+}
+
+.hero img{
+width:500px;
+border-radius:20px;
+margin-left:-60px;
+}
+
+/* QUIENES SOMOS */
+
+.quienes{
+display:flex;
+align-items:center;
+gap:40px;
+padding:40px;
+}
+
+.quienes img{
+width:45%;
+border-radius:20px;
+}
+
+.quienes-text{
+width:55%;
+text-align:justify;
+line-height:1.7;
+}
+
+.quienes-text h2{
+font-family:"Lobster Two", cursive;
+font-size:34px;
+}
+/* BENEFICIOS */
+
+.section{
+padding:40px;
+text-align:center;
+}
+
+.section h2{
+font-size:30px;
+margin-bottom:20px;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:20px;
+}
+
+.info-card{
+background:#a4b86c;
+color:white;
+padding:25px;
+border-radius:20px;
+text-align:center;
+line-height:1.6;
+}
+
+/* SABORES */
+
+.sabores{
+background:white;
+padding:20px;
+margin:30px;
+border-radius:20px;
+}
+
+.sabores h2{
+font-family:"Playwrite HU", cursive;
+font-size:34px;
+letter-spacing:1px;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:25px;
+align-items:start;
+}
+
+.card{
+background:#fff1d6;
+padding:15px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+cursor:pointer;
+
+/* CAMBIO IMPORTANTE */
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 25px rgba(0,0,0,0.2);
+background:#fff6e5;
+}
+
+.card img{
+width:110px;
+height:110px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:8px;
+}
+
+/* TARJETAS INFORMACION */
+
+.info-card2{
+background:#ffd9e6;
+padding:25px;
+border-radius:20px;
+margin:20px auto;
+max-width:800px;
+line-height:1.7;
+}
+
+.diferencias{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-top:20px;
+}
+
+.dif-card{
+background:#a4b86c;
+color:white;
+padding:20px;
+border-radius:20px;
+line-height:1.6;
+}
+
+.dif-card ul{
+padding-left:20px;
+}
+
+/* FRASE */
+
+.frase{
+background:#ffd9e6;
+padding:25px;
+border-radius:20px;
+max-width:700px;
+margin:40px auto;
+font-size:20px;
+font-weight:bold;
+color:#cc4f8a;
+text-align:center;
+}
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+z-index:2000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.modal-contenido{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+width:400px;
+position:relative;
+}
+
+.modal-img{
+width:200px;
+margin-bottom:15px;
+}
+
+.cerrar{
+position:absolute;
+top:10px;
+right:15px;
+font-size:28px;
+cursor:pointer;
+}
+
+/* CARRITO */
+
+#carritoPanel{
+position:fixed;
+right:0;
+top:0;
+width:350px;
+height:100%;
+background:white;
+padding:20px;
+box-shadow:-5px 0 20px rgba(0,0,0,0.2);
+display:none;
+overflow:auto;
+z-index:3000;
+}
+
+.cerrarCarrito{
+cursor:pointer;
+font-size:22px;
+float:right;
+}
+
+button{
+padding:10px 15px;
+background:black;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#333;
+}
+
+footer{
+text-align:center;
+padding:30px;
+font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<nav>
+
+<img src="imagenes/logo.jpg" class="logo">
+
+<div class="carrito-icono" onclick="abrirCarrito()">
+🛒
+<span id="contadorCarrito">0</span>
+</div>
+
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#sabores">Sabores</a></li>
+<li><a href="#quienes">Quiénes somos</a></li>
+<li><a href="#beneficios">Beneficios</a></li>
+<li><a href="#info">Información</a></li>
+<li><a href="https://wa.me/527224005244" target="_blank">Contacto</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<div class="hero" id="inicio">
+
+<div class="hero-text">
+
+<h1>Descubre nuevos sabores</h1>
+
+<p>
+Bienvenido a Yogurt WJ. Nos alegra que estés aquí. Nuestro objetivo es ofrecerte
+un yogurt natural, cremoso y lleno de sabor elaborado con ingredientes de calidad.
+Cada uno de nuestros productos está pensado para brindarte una experiencia deliciosa
+y nutritiva que puedas disfrutar en cualquier momento del día.
+</p>
+
+<p>
+Explora nuestra variedad de sabores, conoce los beneficios del yogurt y descubre
+por qué este alimento es una excelente opción para complementar una alimentación
+equilibrada.
+</p>
+
+</div>
+
+<img src="imagenes/hero.jpg">
+
+</div>
+
+<!-- QUIENES SOMOS -->
+
+<div class="quienes" id="quienes">
+
+<img src="imagenes/quienes.jpg">
+
+<div class="quienes-text">
+
+<h2>Quiénes somos</h2>
+
+<p>
+Somos un pequeño emprendimiento dedicado a la elaboración de yogurt natural
+artesanal. Nuestro proyecto nace con la idea de ofrecer un producto fresco,
+delicioso y accesible para todos.
+</p>
+
+<p>
+Trabajamos cuidadosamente en cada preparación para garantizar una textura
+cremosa y un sabor que realmente se disfrute. Nuestro compromiso es brindar
+un alimento que además de delicioso aporte beneficios nutricionales.
+</p>
+
+</div>
+
+</div>
+
+<!-- BENEFICIOS -->
+
+<div class="section" id="beneficios">
+
+<h2>Beneficios del yogurt</h2>
+
+<div class="info-grid">
+
+<div class="info-card">Aporta vitaminas esenciales como la vitamina A, B y D.</div>
+<div class="info-card">Es una excelente fuente de calcio que ayuda a fortalecer huesos y dientes.</div>
+<div class="info-card">Contiene proteínas necesarias para el desarrollo muscular.</div>
+<div class="info-card">Favorece la digestión gracias a sus bacterias beneficiosas.</div>
+<div class="info-card">Contribuye al equilibrio de la microbiota intestinal.</div>
+<div class="info-card">Puede ayudar a fortalecer el sistema inmunológico.</div>
+<div class="info-card">Es un alimento nutritivo ideal para cualquier momento del día.</div>
+<div class="info-card">Aporta minerales importantes como fósforo y zinc.</div>
+
+</div>
+
+</div>
+
+<!-- SABORES -->
+
+<div class="sabores" id="sabores">
+
+<h2>Sabores disponibles</h2>
+
+<div class="product-grid">
+
+<div class="card" onclick="abrirModal('Manzana')">
+<img src="imagenes/manzana.jpg">
+<h3>Manzana</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Guayaba')">
+<img src="imagenes/guayaba.jpg">
+<h3>Guayaba</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Piña-coco')">
+<img src="imagenes/pina-coco.jpg">
+<h3>Piña-coco</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Galleta Oreo')">
+<img src="imagenes/oreo.jpg">
+<h3>Galleta Oreo</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Mango')">
+<img src="imagenes/mango.jpg">
+<h3>Mango</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Cereal')">
+<img src="imagenes/cereal.jpg">
+<h3>Cereal</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Frutos rojos')">
+<img src="imagenes/frutos-rojos.jpg">
+<h3>Frutos rojos</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Ciruela pasa')">
+<img src="imagenes/ciruela.jpg">
+<h3>Ciruela pasa</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Nuez')">
+<img src="imagenes/nuez.jpg">
+<h3>Nuez</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Piña')">
+<img src="imagenes/pina.jpg">
+<h3>Piña</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Durazno')">
+<img src="imagenes/durazno.jpg">
+<h3>Durazno</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Coco')">
+<img src="imagenes/coco.jpg">
+<h3>Coco</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Fresa')">
+<img src="imagenes/fresa.jpg">
+<h3>Fresa</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Zarzamora')">
+<img src="imagenes/zarzamora.png">
+<h3>Zarzamora</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Yogurt Griego')">
+<img src="imagenes/griego.jpg">
+<h3>Yogurt Griego</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Yakult')">
+<img src="imagenes/yakult.jpg">
+<h3>Yakult</h3>
+</div>
+
+<div class="card" onclick="abrirModal('Danonino')">
+<img src="imagenes/danonino.jpg">
+<h3>Danonino</h3>
+</div>
+
+</div> <!-- CIERRE DEL GRID DE SABORES -->
+
+<!-- INFORMACION -->
+
+<div class="section" id="info">
+
+<h2>¿Qué es el yogurt?</h2>
+
+<div class="info-card2">
+
+El yogurt es un alimento lácteo que se obtiene a través de la fermentación de la leche.
+Durante este proceso intervienen bacterias beneficiosas que transforman la lactosa en
+ácido láctico, lo que produce su sabor ligeramente ácido y su característica textura
+cremosa.
+
+Gracias a este proceso de fermentación, el yogurt se convierte en un alimento fácil de
+digerir y muy nutritivo. Además de su sabor agradable, es reconocido por aportar
+proteínas, calcio, vitaminas y bacterias beneficiosas para el organismo.
+
+</div>
+
+<div class="diferencias">
+
+<div class="dif-card">
+
+<h3>Yogurt natural</h3>
+
+<ul>
+<li>Se obtiene mediante la fermentación directa de la leche.</li>
+<li>Su textura es cremosa pero más ligera.</li>
+<li>Contiene proteínas en cantidades moderadas.</li>
+<li>Generalmente conserva mayor cantidad de lactosa.</li>
+<li>Su sabor suele ser suave y ligeramente ácido.</li>
+</ul>
+
+</div>
+
+<div class="dif-card">
+
+<h3>Yogurt griego</h3>
+
+<ul>
+<li>Se obtiene filtrando el yogurt tradicional.</li>
+<li>Su textura es más espesa y concentrada.</li>
+<li>Contiene una mayor cantidad de proteína.</li>
+<li>Tiene menor cantidad de lactosa.</li>
+<li>Su sabor es más intenso.</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="frase">
+El yogurt es un alimento muy completo, cargado de vitaminas, proteínas y minerales. 
+
+¡Por ello es una gran opción para añadir a tu alimentación!
+</div>
+
+<footer id="contacto">
+© 2026 Yogurt WJ – Todos los derechos reservados
+</footer>
+
+</div>
+
+<!-- MODAL -->
+
+<div id="productoModal" class="modal">
+
+<div class="modal-contenido">
+
+<span class="cerrar" onclick="cerrarModal()">×</span>
+
+<h2 id="modalTitulo"></h2>
+
+<label>Tamaño</label>
+
+<select id="modalTamano">
+<option value="1 Litro - $60">1 Litro - $60</option>
+<option value="1/2 Litro - $35">1/2 Litro - $35</option>
+</select>
+
+<br><br>
+
+<label>Cantidad</label>
+
+<input type="number" id="modalCantidad" value="1" min="1">
+
+<br><br>
+
+<button onclick="agregarCarrito()">Agregar al carrito</button>
+
+</div>
+
+</div>
+
+<!-- CARRITO -->
+
+<div id="carritoPanel">
+
+<span class="cerrarCarrito" onclick="cerrarCarrito()">✖</span>
+
+<h2>Tu pedido</h2>
+
+<div id="listaCarrito"></div>
+
+<br>
+
+<button onclick="enviarWhats()">Enviar pedido por WhatsApp</button>
+
+</div>
+
+<script>
+
+let productoActual=""
+let carrito=[]
+
+function abrirModal(nombre){
+
+productoActual=nombre
+document.getElementById("modalTitulo").innerText=nombre
+document.getElementById("productoModal").style.display="flex"
+
+}
+
+function cerrarModal(){
+
+document.getElementById("productoModal").style.display="none"
+
+}
+
+function agregarCarrito(){
+
+let tamano=document.getElementById("modalTamano").value
+let cantidad=document.getElementById("modalCantidad").value
+
+carrito.push({
+nombre:productoActual,
+tamano:tamano,
+cantidad:cantidad
+})
+
+actualizarCarrito()
+cerrarModal()
+
+}
+
+function actualizarCarrito(){
+
+let lista=document.getElementById("listaCarrito")
+lista.innerHTML=""
+
+carrito.forEach((p,index)=>{
+
+lista.innerHTML+=`
+<p>
+<b>${p.nombre}</b><br>
+${p.tamano}<br>
+Cantidad: ${p.cantidad}
+<br>
+<button onclick="eliminarProducto(${index})">Eliminar</button>
+</p>
+<hr>
+`
+
+})
+
+document.getElementById("contadorCarrito").innerText=carrito.length
+
+}
+
+function eliminarProducto(index){
+
+carrito.splice(index,1)
+actualizarCarrito()
+
+}
+
+function abrirCarrito(){
+
+document.getElementById("carritoPanel").style.display="block"
+
+}
+
+function cerrarCarrito(){
+
+document.getElementById("carritoPanel").style.display="none"
+
+}
+
+function enviarWhats(){
+
+let mensaje="Holaaaaa 👋😄\n\n"
+mensaje+="Quiero hacer este pedido de Yogurt WJ 🥣✨\n"
+mensaje+="Aquí están los productos:\n\n"
+
+carrito.forEach(p=>{
+
+let emoji="🥣"
+
+if(p.nombre.includes("Oreo")) emoji="🍪"
+if(p.nombre.includes("Fresa")) emoji="🍓"
+if(p.nombre.includes("Mango")) emoji="🥭"
+if(p.nombre.includes("Piña")) emoji="🍍"
+if(p.nombre.includes("Coco")) emoji="🥥"
+if(p.nombre.includes("Manzana")) emoji="🍎"
+if(p.nombre.includes("Guayaba")) emoji="🍈"
+if(p.nombre.includes("Durazno")) emoji="🍑"
+if(p.nombre.includes("Nuez")) emoji="🌰"
+if(p.nombre.includes("Cereal")) emoji="🥣"
+if(p.nombre.includes("Frutos")) emoji="🍓"
+if(p.nombre.includes("Zarzamora")) emoji="🫐"
+if(p.nombre.includes("Ciruela")) emoji="🍑"
+if(p.nombre.includes("Yakult")) emoji="🥛"
+if(p.nombre.includes("Danonino")) emoji="🧁"
+if(p.nombre.includes("Griego")) emoji="🥣"
+
+mensaje+=
+emoji+" "+p.nombre+"\n"+
+"📦 Tamaño: "+p.tamano+"\n"+
+"🔢 Cantidad: "+p.cantidad+"\n\n"
+
+})
+
+mensaje+="Muchas gracias 🙌\n"
+mensaje+="Quedo atento a la confirmación del pedido 😊"
+
+let url="https://wa.me/527224005244?text="+encodeURIComponent(mensaje)
+
+window.open(url,"_blank")
+
+}
+</script>
+
+</body>
+</html>

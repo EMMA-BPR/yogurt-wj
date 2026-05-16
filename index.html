@@ -355,17 +355,16 @@ font-size:14px;
 </div>
 
 <ul>
-<li><a href="#inicio">Inicio</a></li>
-<li><a href="#sabores">Sabores</a></li>
-<li><a href="#quienes">Quiénes somos</a></li>
-<li><a href="#beneficios">Beneficios</a></li>
-<li><a href="#info">Información</a></li>
-<li><a href="https://wa.me/527224005244" target="_blank">Contacto</a></li>
+<a href="#inicio">Inicio</a>
+<a href="#sabores">Sabores</a>
+<a href="#diabeticos">Para Diabéticos</a>
+<a href="#quienes-somos">Quiénes somos</a>
+<a href="#beneficios">Beneficios</a>
+<a href="#informacion">Información</a>
+<a href="#contacto">Contacto</a>
 </ul>
 
 </nav>
-
-<!-- HERO -->
 
 <div class="hero" id="inicio">
 
@@ -392,8 +391,6 @@ equilibrada.
 
 </div>
 
-<!-- QUIENES SOMOS -->
-
 <div class="quienes" id="quienes">
 
 <img src="imagenes/quienes.jpg">
@@ -418,8 +415,6 @@ un alimento que además de delicioso aporte beneficios nutricionales.
 
 </div>
 
-<!-- BENEFICIOS -->
-
 <div class="section" id="beneficios">
 
 <h2>Beneficios del yogurt</h2>
@@ -438,8 +433,6 @@ un alimento que además de delicioso aporte beneficios nutricionales.
 </div>
 
 </div>
-
-<!-- SABORES -->
 
 <div class="sabores" id="sabores">
 
@@ -532,9 +525,36 @@ un alimento que además de delicioso aporte beneficios nutricionales.
 <h3>Danonino</h3>
 </div>
 
-</div> <!-- CIERRE DEL GRID DE SABORES -->
+<a href="#beneficios-kefir" style="text-decoration: none; color: inherit;">
+    <div class="card">
+        <img src="imagenes/kefir.jpg">
+        <h3>Kéfir</h3>
+    </div>
+</a>
 
-<!-- INFORMACION -->
+</div> <section id="diabeticos" style="background-color: white; padding: 20px; margin: 30px; border-radius: 20px; text-align: center;">
+    <h2 style="font-family: 'Playwrite HU', cursive; font-size: 34px; letter-spacing: 1px; margin-bottom: 10px;">Línea Sin Azúcar Añadida</h2>
+    <p style="color: #666; margin-bottom: 40px; font-size: 1.1rem;">Productos ideales para el cuidado de tu salud y niveles de glucosa.</p>
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; align-items: start;">
+        
+        <div class="card" onclick="abrirModal('Kéfir sin Azúcar')" style="flex: 1 1 180px; max-width: 240px;">
+            <img src="imagenes/kefir_sin_azucar.jpg" alt="Kéfir sin Azúcar">
+            <h3>Kéfir sin Azúcar</h3>
+        </div>
+
+        <div class="card" onclick="abrirModal('Yogurt Griego sin Azúcar')" style="flex: 1 1 180px; max-width: 240px;">
+            <img src="imagenes/griego_sin_azucar.jpg" alt="Yogurt Griego sin Azúcar">
+            <h3>Yogurt Griego sin Azúcar</h3>
+        </div>
+
+        <div class="card" onclick="abrirModal('Yogurt Natural sin Azúcar')" style="flex: 1 1 180px; max-width: 240px;">
+            <img src="imagenes/natural_sin_azucar.jpg" alt="Yogurt Natural sin Azúcar">
+            <h3>Yogurt Natural sin Azúcar</h3>
+        </div>
+
+    </div>
+</section>
 
 <div class="section" id="info">
 
@@ -593,178 +613,300 @@ El yogurt es un alimento muy completo, cargado de vitaminas, proteínas y minera
 ¡Por ello es una gran opción para añadir a tu alimentación!
 </div>
 
+<div class="section" id="beneficios-kefir">
+    <h2>Beneficios del Kéfir</h2>
+    <div class="info-card2" style="text-align: left; max-width: 900px;">
+        <p>El kéfir es un excelente aliado para tu salud diaria, destacando por los siguientes beneficios:</p>
+        <ul style="padding-left: 20px; line-height: 1.8;">
+            <li>Equilibra la flora intestinal y mejora la digestión.</li>
+            <li>Refuerza el sistema inmunológico.</li>
+            <li>Alta en proteínas de buena calidad como calcio, fósforo y vitaminas.</li>
+            <li>Ideal para la salud ósea (Nutrición ósea: vitamina K2, calcio y magnesio).</li>
+            <li>Facilita su digestión a las personas intolerantes a la lactosa.</li>
+            <li>Estabiliza niveles de colesterol y azúcar.</li>
+            <li>Contiene propiedades antimicrobianas.</li>
+            <li>Conexión intestino-cerebro: se le atribuyen beneficios en el estado de ánimo, reducción de ansiedad y estrés (produce compuestos como el GABA, B12, calcio y magnesio).</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section" style="padding-top: 0;">
+    <div class="diferencias" style="max-width: 900px; margin: 0 auto; text-align: left;">
+        
+        <div class="dif-card">
+            <h3 style="text-align: center; font-size: 22px; margin-top: 5px;">Yogurt para Diabéticos</h3>
+            <p>Nuestro yogurt griego y kéfir son aptos para que lo consuman personas con diabetes debido a su alto contenido en proteínas y bajo índice glucémico, generando saciedad y evitando picos de glucosa.</p>
+            <ul>
+                <li>No contienen azúcares.</li>
+                <li>Bajos en grasa.</li>
+                <li>Cultivos activos (probióticos).</li>
+                <li>Alto contenido en proteínas.</li>
+                <li>Bajo índice de carbohidratos.</li>
+            </ul>
+        </div>
+
+        <div class="dif-card">
+            <h3 style="text-align: center; font-size: 22px; margin-top: 5px;">Apto para Deportistas</h3>
+            <p>Nuestro yogurt griego o kéfir sin azúcar añadida es la opción ideal para optimizar tu rendimiento y cuidado físico:</p>
+            <ul>
+                <li>Alto contenido proteico.</li>
+                <li>Favorece a la recuperación muscular.</li>
+                <li>Aporta calcio, probióticos y aminoácidos.</li>
+                <li>Post entrenamiento ayuda a reparar fibras y rehidratar.</li>
+                <li>Fortalece huesos y músculos.</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
 <footer id="contacto">
 © 2026 Yogurt WJ – Todos los derechos reservados
 </footer>
 
 </div>
 
-<!-- MODAL -->
-
 <div id="productoModal" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">×</span>
+        <h2 id="modalTitulo" style="font-family:'Playwrite HU', cursive; margin-bottom:20px;"></h2>
 
-<div class="modal-contenido">
+        <div id="contenedorBase" style="margin-bottom: 15px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px;">Tipo de base:</label>
+            <select id="modalBase" style="padding: 8px; width: 80%; border-radius: 8px;">
+                <option value="Vaca">Leche de Vaca</option>
+                <option value="Kéfir">Kéfir (Búlgaros)</option>
+            </select>
+        </div>
 
-<span class="cerrar" onclick="cerrarModal()">×</span>
+        <div style="margin-bottom: 15px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px;">Presentación y Precio:</label>
+            <select id="modalTamano" style="padding: 8px; width: 80%; border-radius: 8px;">
+            </select>
+        </div>
 
-<h2 id="modalTitulo"></h2>
+        <div style="margin-bottom: 20px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px;">Cantidad:</label>
+            <input type="number" id="modalCantidad" value="1" min="1" style="padding: 8px; width: 50px; text-align: center; border-radius: 8px; border: 1px solid #ccc;">
+        </div>
 
-<label>Tamaño</label>
-
-<select id="modalTamano">
-<option value="1 Litro - $60">1 Litro - $60</option>
-<option value="1/2 Litro - $35">1/2 Litro - $35</option>
-</select>
-
-<br><br>
-
-<label>Cantidad</label>
-
-<input type="number" id="modalCantidad" value="1" min="1">
-
-<br><br>
-
-<button onclick="agregarCarrito()">Agregar al carrito</button>
-
+        <button onclick="agregarCarrito()" style="background: #cc4f8a; padding: 12px 25px; font-size: 16px; font-weight: bold;">Agregar al carrito</button>
+    </div>
 </div>
-
-</div>
-
-<!-- CARRITO -->
 
 <div id="carritoPanel">
-
-<span class="cerrarCarrito" onclick="cerrarCarrito()">✖</span>
-
-<h2>Tu pedido</h2>
-
-<div id="listaCarrito"></div>
-
-<br>
-
-<button onclick="enviarWhats()">Enviar pedido por WhatsApp</button>
-
+    <span class="cerrarCarrito" onclick="cerrarCarrito()">✖</span>
+    <h2>Tu pedido</h2>
+    <div id="listaCarrito"></div>
+    <br>
+    <button onclick="enviarWhats()">Enviar pedido por WhatsApp</button>
 </div>
 
 <script>
+let productoActual = "";
+let carrito = [];
 
-let productoActual=""
-let carrito=[]
+function abrirModal(nombre) {
+    if (nombre === "Kéfir") {
+        const seccionKefir = document.getElementById("beneficios-kefir");
+        if (seccionKefir) {
+            seccionKefir.scrollIntoView({ behavior: "smooth" });
+        }
+        return;
+    }
 
-function abrirModal(nombre){
+    productoActual = nombre;
+    document.getElementById("modalTitulo").innerText = nombre;
+    
+    let comboTamano = document.getElementById("modalTamano");
+    let contenedorBase = document.getElementById("contenedorBase");
+    
+    comboTamano.innerHTML = "";
+    let saborGriegoExistente = document.getElementById("contenedorSaborGriego");
+    if (saborGriegoExistente) saborGriegoExistente.remove();
+    
+    contenedorBase.style.display = "block";
 
-productoActual=nombre
-document.getElementById("modalTitulo").innerText=nombre
-document.getElementById("productoModal").style.display="flex"
+    // NUEVA VALIDACIÓN: Línea Sin Azúcar Añadida (solo tamaños)
+    if (nombre === "Kéfir sin Azúcar" || nombre === "Yogurt Griego sin Azúcar" || nombre === "Yogurt Natural sin Azúcar") {
+        comboTamano.innerHTML = `
+            <option value="1 Litro">1 Litro</option>
+            <option value="1/2 Litro">1/2 Litro</option>
+        `;
+        comboTamano.removeAttribute("onchange");
+    }
+    else if (nombre === "Yogurt Griego") {
+        comboTamano.innerHTML = `
+            <option value="1/2 Litro Natural - $70">1/2 Litro Natural - $70</option>
+            <option value="1/2 Litro con Sabor - $80">1/2 Litro con Sabor - $80</option>
+        `;
+        comboTamano.setAttribute("onchange", "verificarSaborGriego()");
+    } 
+    else if (nombre === "Yogurt Natural") {
+        comboTamano.innerHTML = `
+            <option value="1 Litro - $60">1 Litro - $60</option>
+            <option value="1/2 Litro - $30">1/2 Litro - $30</option>
+        `;
+        comboTamano.removeAttribute("onchange");
+    }
+    else if (nombre === "Yakult") {
+        contenedorBase.style.display = "none";
+        comboTamano.innerHTML = `<option value="1 Litro - $40">1 Litro - $40</option>`;
+        comboTamano.removeAttribute("onchange");
+    } 
+    else if (nombre === "Danonino") {
+        contenedorBase.style.display = "none";
+        comboTamano.innerHTML = `<option value="1/2 Litro - $70">1/2 Litro - $70</option>`;
+        comboTamano.removeAttribute("onchange");
+    } 
+    else {
+        comboTamano.innerHTML = `
+            <option value="1 Litro - $70">1 Litro - $70</option>
+            <option value="1/2 Litro - $35">1/2 Litro - $35</option>
+        `;
+        comboTamano.removeAttribute("onchange");
+    }
 
+    document.getElementById("productoModal").style.display = "flex";
 }
 
-function cerrarModal(){
-
-document.getElementById("productoModal").style.display="none"
-
+function verificarSaborGriego() {
+    let comboTamano = document.getElementById("modalTamano");
+    let saborGriegoExistente = document.getElementById("contenedorSaborGriego");
+    
+    if (comboTamano.value.includes("con Sabor")) {
+        if (!saborGriegoExistente) {
+            let divSabor = document.createElement("div");
+            divSabor.id = "contenedorSaborGriego";
+            divSabor.style.marginBottom = "15px";
+            divSabor.innerHTML = `
+                <label style="font-weight: bold; display: block; margin-bottom: 5px;">Elige el sabor del Griego:</label>
+                <select id="modalSaborGriego" style="padding: 8px; width: 80%; border-radius: 8px;">
+                    <option value="Manzana">Manzana</option>
+                    <option value="Guayaba">Guayaba</option>
+                    <option value="Piña-coco">Piña-coco</option>
+                    <option value="Galleta Oreo">Galleta Oreo</option>
+                    <option value="Mango">Mango</option>
+                    <option value="Cereal">Cereal</option>
+                    <option value="Frutos rojos">Frutos rojos</option>
+                    <option value="Ciruela pasa">Ciruela pasa</option>
+                    <option value="Nuez">Nuez</option>
+                    <option value="Piña">Piña</option>
+                    <option value="Durazno">Durazno</option>
+                    <option value="Coco">Coco</option>
+                    <option value="Fresa">Fresa</option>
+                    <option value="Zarzamora">Zarzamora</option>
+                </select>
+            `;
+            comboTamano.parentElement.insertAdjacentElement("afterend", divSabor);
+        }
+    } else {
+        if (saborGriegoExistente) saborGriegoExistente.remove();
+    }
 }
 
-function agregarCarrito(){
+function cerrarModal() {
+    document.getElementById("productoModal").style.display = "none";
+}
 
-let tamano=document.getElementById("modalTamano").value
-let cantidad=document.getElementById("modalCantidad").value
+function agregarCarrito() {
+    let base = document.getElementById("modalBase").value;
+    let tamanoYPrecio = document.getElementById("modalTamano").value;
+    let cantidad = document.getElementById("modalCantidad").value;
+    
+    let presentacionFinal = "";
+    if (productoActual === "Yakult" || productoActual === "Danonino") {
+        presentacionFinal = tamanoYPrecio;
+    } else if (productoActual.includes("sin Azúcar") && productoActual === "Yogurt Griego sin Azúcar") {
+        // Validación extra si el griego sin azúcar necesita su saborizador interactivo
+        let selectSaborG = document.getElementById("modalSaborGriego");
+        let saborG = selectSaborG ? selectSaborG.value : "Natural";
+        presentacionFinal = `Base: ${base} | Sabor: ${saborG} | ${tamanoYPrecio}`;
+    } else {
+        presentacionFinal = `Base: ${base} | ${tamanoYPrecio}`;
+    }
 
-carrito.push({
-nombre:productoActual,
-tamano:tamano,
-cantidad:cantidad
-})
+    carrito.push({
+        nombre: productoActual,
+        tamano: presentacionFinal,
+        cantidad: cantidad
+    });
 
-actualizarCarrito()
-cerrarModal()
-
+    actualizarCarrito();
+    cerrarModal();
+    document.getElementById("modalCantidad").value = 1;
 }
 
 function actualizarCarrito(){
+    let lista = document.getElementById("listaCarrito");
+    lista.innerHTML = "";
 
-let lista=document.getElementById("listaCarrito")
-lista.innerHTML=""
+    carrito.forEach((p, index) => {
+        lista.innerHTML += `
+        <p>
+        <b>${p.nombre}</b><br>
+        ${p.tamano}<br>
+        Cantidad: ${p.cantidad}
+        <br>
+        <button onclick="eliminarProducto(${index})">Eliminar</button>
+        </p>
+        <hr>
+        `;
+    });
 
-carrito.forEach((p,index)=>{
-
-lista.innerHTML+=`
-<p>
-<b>${p.nombre}</b><br>
-${p.tamano}<br>
-Cantidad: ${p.cantidad}
-<br>
-<button onclick="eliminarProducto(${index})">Eliminar</button>
-</p>
-<hr>
-`
-
-})
-
-document.getElementById("contadorCarrito").innerText=carrito.length
-
+    document.getElementById("contadorCarrito").innerText = carrito.length;
 }
 
 function eliminarProducto(index){
-
-carrito.splice(index,1)
-actualizarCarrito()
-
+    carrito.splice(index, 1);
+    actualizarCarrito();
 }
 
 function abrirCarrito(){
-
-document.getElementById("carritoPanel").style.display="block"
-
+    document.getElementById("carritoPanel").style.display = "block";
 }
 
 function cerrarCarrito(){
-
-document.getElementById("carritoPanel").style.display="none"
-
+    document.getElementById("carritoPanel").style.display = "none";
 }
 
 function enviarWhats(){
+    let mensaje = "Holaaaaa 👋😄\n\n";
+    mensaje += "Quiero hacer este pedido de Yogurt WJ 🥣✨\n";
+    mensaje += "Aquí están los productos:\n\n";
 
-let mensaje="Holaaaaa 👋😄\n\n"
-mensaje+="Quiero hacer este pedido de Yogurt WJ 🥣✨\n"
-mensaje+="Aquí están los productos:\n\n"
+    carrito.forEach(p => {
+        let emoji = "🥣";
 
-carrito.forEach(p=>{
+        if(p.nombre.includes("Oreo")) emoji = "🍪";
+        if(p.nombre.includes("Fresa")) emoji = "🍓";
+        if(p.nombre.includes("Mango")) emoji = "🥭";
+        if(p.nombre.includes("Piña")) emoji = "🍍";
+        if(p.nombre.includes("Coco")) emoji = "🥥";
+        if(p.nombre.includes("Manzana")) emoji = "🍎";
+        if(p.nombre.includes("Guayaba")) emoji = "🍈";
+        if(p.nombre.includes("Durazno")) emoji = "🍑";
+        if(p.nombre.includes("Nuez")) emoji = "🌰";
+        if(p.nombre.includes("Cereal")) emoji = "🥣";
+        if(p.nombre.includes("Frutos")) emoji = "🍓";
+        if(p.nombre.includes("Zarzamora")) emoji = "🫐";
+        if(p.nombre.includes("Ciruela")) emoji = "🍑";
+        if(p.nombre.includes("Yakult")) emoji = "🥛";
+        if(p.nombre.includes("Danonino")) emoji = "🧁";
+        if(p.nombre.includes("Griego")) emoji = "🥣";
+        if(p.nombre.includes("Azúcar")) emoji = "🟢"; // Emoji distintivo saludable
 
-let emoji="🥣"
+        mensaje +=
+        emoji + " " + p.nombre + "\n" +
+        "📦 Tamaño: " + p.tamano + "\n" +
+        "🔢 Cantidad: " + p.cantidad + "\n\n";
+    });
 
-if(p.nombre.includes("Oreo")) emoji="🍪"
-if(p.nombre.includes("Fresa")) emoji="🍓"
-if(p.nombre.includes("Mango")) emoji="🥭"
-if(p.nombre.includes("Piña")) emoji="🍍"
-if(p.nombre.includes("Coco")) emoji="🥥"
-if(p.nombre.includes("Manzana")) emoji="🍎"
-if(p.nombre.includes("Guayaba")) emoji="🍈"
-if(p.nombre.includes("Durazno")) emoji="🍑"
-if(p.nombre.includes("Nuez")) emoji="🌰"
-if(p.nombre.includes("Cereal")) emoji="🥣"
-if(p.nombre.includes("Frutos")) emoji="🍓"
-if(p.nombre.includes("Zarzamora")) emoji="🫐"
-if(p.nombre.includes("Ciruela")) emoji="🍑"
-if(p.nombre.includes("Yakult")) emoji="🥛"
-if(p.nombre.includes("Danonino")) emoji="🧁"
-if(p.nombre.includes("Griego")) emoji="🥣"
+    mensaje += "Muchas gracias 🙌\n";
+    mensaje += "Quedo atento a la confirmación del pedido 😊";
 
-mensaje+=
-emoji+" "+p.nombre+"\n"+
-"📦 Tamaño: "+p.tamano+"\n"+
-"🔢 Cantidad: "+p.cantidad+"\n\n"
-
-})
-
-mensaje+="Muchas gracias 🙌\n"
-mensaje+="Quedo atento a la confirmación del pedido 😊"
-
-let url="https://wa.me/527224005244?text="+encodeURIComponent(mensaje)
-
-window.open(url,"_blank")
-
+    let url = "https://wa.me/527224005244?text=" + encodeURIComponent(mensaje);
+    window.open(url, "_blank");
 }
 </script>
 

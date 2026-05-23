@@ -355,13 +355,13 @@ font-size:14px;
 </div>
 
 <ul>
-<a href="#inicio">Inicio</a>
-<a href="#sabores">Sabores</a>
-<a href="#diabeticos">Para Diabéticos</a>
-<a href="#quienes-somos">Quiénes somos</a>
-<a href="#beneficios">Beneficios</a>
-<a href="#informacion">Información</a>
-<a href="#contacto">Contacto</a>
+  <a href="#inicio">Inicio</a>
+  <a href="#sabores">Sabores</a>
+  <a href="#diabeticos">Para Diabéticos</a>
+  <a href="#quienes">Quiénes somos</a>
+  <a href="#beneficios">Beneficios</a>
+  <a href="#info">Información</a>
+  <a href="https://wa.me/527224005244" target="_blank">Contacto</a>
 </ul>
 
 </nav>
@@ -532,7 +532,9 @@ un alimento que además de delicioso aporte beneficios nutricionales.
     </div>
 </a>
 
-</div> <section id="diabeticos" style="background-color: white; padding: 20px; margin: 30px; border-radius: 20px; text-align: center;">
+</div>
+
+<section id="diabeticos" style="background-color: white; padding: 20px; margin: 30px; border-radius: 20px; text-align: center;">
     <h2 style="font-family: 'Playwrite HU', cursive; font-size: 34px; letter-spacing: 1px; margin-bottom: 10px;">Línea Sin Azúcar Añadida</h2>
     <p style="color: #666; margin-bottom: 40px; font-size: 1.1rem;">Productos ideales para el cuidado de tu salud y niveles de glucosa.</p>
     
@@ -727,7 +729,6 @@ function abrirModal(nombre) {
     
     contenedorBase.style.display = "block";
 
-    // NUEVA VALIDACIÓN: Línea Sin Azúcar Añadida (solo tamaños)
     if (nombre === "Kéfir sin Azúcar" || nombre === "Yogurt Griego sin Azúcar" || nombre === "Yogurt Natural sin Azúcar") {
         comboTamano.innerHTML = `
             <option value="1 Litro">1 Litro</option>
@@ -818,7 +819,6 @@ function agregarCarrito() {
     if (productoActual === "Yakult" || productoActual === "Danonino") {
         presentacionFinal = tamanoYPrecio;
     } else if (productoActual.includes("sin Azúcar") && productoActual === "Yogurt Griego sin Azúcar") {
-        // Validación extra si el griego sin azúcar necesita su saborizador interactivo
         let selectSaborG = document.getElementById("modalSaborGriego");
         let saborG = selectSaborG ? selectSaborG.value : "Natural";
         presentacionFinal = `Base: ${base} | Sabor: ${saborG} | ${tamanoYPrecio}`;
@@ -894,7 +894,7 @@ function enviarWhats(){
         if(p.nombre.includes("Yakult")) emoji = "🥛";
         if(p.nombre.includes("Danonino")) emoji = "🧁";
         if(p.nombre.includes("Griego")) emoji = "🥣";
-        if(p.nombre.includes("Azúcar")) emoji = "🟢"; // Emoji distintivo saludable
+        if(p.nombre.includes("Azúcar")) emoji = "🟢";
 
         mensaje +=
         emoji + " " + p.nombre + "\n" +

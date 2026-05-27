@@ -532,6 +532,11 @@ un alimento que además de delicioso aporte beneficios nutricionales.
     </div>
 </a>
 
+<div class="card" onclick="abrirModal('Mazapán')">
+    <img src="imagenes/mazapan.jpg">
+    <h3>Mazapán</h3>
+</div>
+
 </div>
 
 <section id="diabeticos" style="background-color: white; padding: 20px; margin: 30px; border-radius: 20px; text-align: center;">
@@ -797,6 +802,7 @@ function verificarSaborGriego() {
                     <option value="Coco">Coco</option>
                     <option value="Fresa">Fresa</option>
                     <option value="Zarzamora">Zarzamora</option>
+                    <option value="Mazapán">Mazapán</option>
                 </select>
             `;
             comboTamano.parentElement.insertAdjacentElement("afterend", divSabor);
@@ -895,6 +901,7 @@ function enviarWhats(){
         if(p.nombre.includes("Danonino")) emoji = "🧁";
         if(p.nombre.includes("Griego")) emoji = "🥣";
         if(p.nombre.includes("Azúcar")) emoji = "🟢";
+        if(p.nombre.includes("Mazapán")) emoji = "🍬";
 
         mensaje +=
         emoji + " " + p.nombre + "\n" +
